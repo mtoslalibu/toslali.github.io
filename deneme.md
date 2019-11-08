@@ -1,7 +1,7 @@
 | Number | Definition | Implementation
 | ------------- | ------------- | ------------- |
 
-|5.1		|Do not disable AppArmor Profile (Scored)	|/proc/{pid}/attr/apparmor/current	|
+|5.1		|Do not disable AppArmor Profile (Scored)	|\/proc\/\{pid\}\/attr\/apparmor\/current	|
 |5.2		|Verify SELinux security options, if applicable (Scored)	|ps -eZ &#124; grep {pid_container}	|
 |5.3		|Restrict Linux Kernel Capabilities within containers (Scored)	|/run/containerd/io.containerd.runtime.v1.linux/moby/{}/config.json -> ["process"]["capabilities"]["permitted"]	|
 |5.4		|Do not use privileged containers (Scored)	|/var/lib/docker/containers/{}/hostconfig.json -> ["Privileged"]	|
